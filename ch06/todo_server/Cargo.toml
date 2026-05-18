@@ -1,0 +1,18 @@
+[package]
+name = "todo_server"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+axum = { version = "0.8", features = ["macros"] }
+chrono = { version = "0.4", features = ["serde"] }
+serde = { version = "1", features = ["serde_derive"] }
+serde_json = "1"
+thiserror = "2"
+tokio = { version = "1.52", features = ["rt-multi-thread", "macros"] }
+tower-http = { version = "0.6", features = ["trace"] }
+tracing = "0.1"
+tracing-subscriber = "0.3"
+utoipa = { version = "5", features = ["axum_extras", "chrono"] }
+utoipa-axum = "0.2"
+utoipa-swagger-ui = { version = "9.0", features = ["axum"] }
